@@ -1,0 +1,914 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../dummy_data_in_r/">
+      
+      
+      <link rel="icon" href="../images/icon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Dummy data in OpenSAFELY - OpenSAFELY Symposium 2024 Dummy Data Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-dummy-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OpenSAFELY Symposium 2024 Dummy Data Workshop" class="md-header__button md-logo" aria-label="OpenSAFELY Symposium 2024 Dummy Data Workshop" data-md-component="logo">
+      
+  <img src="../images/icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenSAFELY Symposium 2024 Dummy Data Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dummy data in OpenSAFELY
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/opensafely/dummy-data-workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OpenSAFELY Symposium 2024 Dummy Data Workshop" class="md-nav__button md-logo" aria-label="OpenSAFELY Symposium 2024 Dummy Data Workshop" data-md-component="logo">
+      
+  <img src="../images/icon.svg" alt="logo">
+
+    </a>
+    OpenSAFELY Symposium 2024 Dummy Data Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/opensafely/dummy-data-workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dummy data in OpenSAFELY
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Dummy data in OpenSAFELY
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is dummy data?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-dummy-data-in-opensafely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using dummy data in OpenSAFELY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using dummy data in OpenSAFELY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-dummy-dataset-with-ehrql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate a dummy dataset with ehrQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics-of-native-dummy-data-in-opensafely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics of native dummy data in OpenSAFELY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-your-own-dummy-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provide your own dummy tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-dummy-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating dummy tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating dummy tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-native-opensafely-dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations of native OpenSAFELY dummy data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provide-your-own-dummy-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provide your own dummy dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-direction-for-native-opensafely-dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future direction for native OpenSAFELY dummy data
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dummy_data_in_r/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building your own dummy data in R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is dummy data?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-dummy-data-in-opensafely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using dummy data in OpenSAFELY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using dummy data in OpenSAFELY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-dummy-dataset-with-ehrql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate a dummy dataset with ehrQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics-of-native-dummy-data-in-opensafely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics of native dummy data in OpenSAFELY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-your-own-dummy-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provide your own dummy tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-dummy-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating dummy tables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating dummy tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations-of-native-opensafely-dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations of native OpenSAFELY dummy data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provide-your-own-dummy-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provide your own dummy dataset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-direction-for-native-opensafely-dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future direction for native OpenSAFELY dummy data
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Dummy data in OpenSAFELY</h1>
+
+<h2 id="what-is-dummy-data">What is dummy data?<a class="headerlink" href="#what-is-dummy-data" title="Permanent link">&para;</a></h2>
+<p>Dummy data (in the context of OpenSAFELY) is data that mimics the output of a dataset produced by running an ehrQL generate-dataset action, in the absence of the real data. It allows you to test and develop your analyses without access to the real data.</p>
+<p>When you run an ehrQL command or a <code>project.yaml</code> action locally (i.e. outside of the secure 
+environment where real patient data lives), ehrQL allows the action to run using simulated data, either
+data generated by ehrQL itself, data that you provide. </p>
+<h2 id="using-dummy-data-in-opensafely">Using dummy data in OpenSAFELY<a class="headerlink" href="#using-dummy-data-in-opensafely" title="Permanent link">&para;</a></h2>
+<p>There are 3 ways to use dummy data:</p>
+<ol>
+<li>Allow ehrQL to generate a dummy dataset from your dataset definition</li>
+<li>Provide your own dummy tables</li>
+<li>Provide your own dummy dataset</li>
+</ol>
+<h3 id="generate-a-dummy-dataset-with-ehrql">Generate a dummy dataset with ehrQL<a class="headerlink" href="#generate-a-dummy-dataset-with-ehrql" title="Permanent link">&para;</a></h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> <code>analysis/dataset_definition.py</code></p>
+<p>This example is a very minimal dataset definition, which finds patients between
+18 and 80, and adds their age and sex to the output dataset:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ehrql</span> <span class="kn">import</span> <span class="n">create_dataset</span>
+<span class="kn">from</span> <span class="nn">ehrql.tables.core</span> <span class="kn">import</span> <span class="n">patients</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">()</span>
+
+<span class="n">index_date</span> <span class="o">=</span> <span class="s2">&quot;2020-03-31&quot;</span>
+
+<span class="n">age</span> <span class="o">=</span> <span class="n">patients</span><span class="o">.</span><span class="n">age_on</span><span class="p">(</span><span class="n">index_date</span><span class="p">)</span>
+
+<span class="n">dataset</span><span class="o">.</span><span class="n">define_population</span><span class="p">((</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">))</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="n">patients</span><span class="o">.</span><span class="n">sex</span>
+</code></pre></div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> Try generating a dummy dataset. In the terminal, run:</p>
+<div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>generate-dataset<span class="w"> </span>analysis/dataset_definition.py
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title"><code>opensafely exec</code> vs <code>opensafely run</code></p>
+<p>We will be using <code>opensafely exec</code> for this part of the workshop. This lets us
+run ehrQL commands as standalone actions. Refer to the documentation on
+<a href="https://docs.opensafely.org/ehrql/explanation/running-ehrql/">running ehrQL</a>
+for more information.</p>
+</div>
+<p>By default, this will generate 10 patients and will print them to the terminal, e.g.</p>
+<div class="highlight"><pre><span></span><code>patient_id,age,sex
+<span class="m">1</span>,29,unknown
+<span class="m">2</span>,24,male
+<span class="m">3</span>,58,unknown
+<span class="m">6</span>,29,unknown
+<span class="m">9</span>,61,intersex
+<span class="m">10</span>,57,male
+<span class="m">11</span>,69,female
+<span class="m">14</span>,76,unknown
+<span class="m">15</span>,23,male
+<span class="m">17</span>,25,unknown
+</code></pre></div>
+<p>Note that all 10 patients have been generated with ages within the expected range (18-80, as defined in the dataset definition) and sex in one of the 4 possible values.</p>
+<div class="admonition example">
+<p class="admonition-title">Update the dataset definition</p>
+<p>Try updating the dataset definition to filter to only female patients. Rerun the <code>generate-dataset</code> command, and confirm that the output dataset now contains 10 female patients.</p>
+</div>
+<p>If you want to produce a different number of patients, you can configure your dummy data by adding:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">configure_dummy_data</span><span class="p">(</span><span class="n">population_size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Change population size</p>
+<p>Try re-running the <code>generate-dataset</code> command above, but with a different poulation size.</p>
+</div>
+<h3 id="characteristics-of-native-dummy-data-in-opensafely">Characteristics of native dummy data in OpenSAFELY<a class="headerlink" href="#characteristics-of-native-dummy-data-in-opensafely" title="Permanent link">&para;</a></h3>
+<p>Dummy data produced from a dataset definition is:</p>
+<ul>
+<li>
+<p><strong>structurally valid</strong>; it will contain the correct columns and data in each column will be of the correct type. Where a column contains categorical data, the column values will respect the categories.  These could be built into ehrQL's definition of the underlying table (e.g. sex in the previous example) or they could be defined in the dataset definition.</p>
+</li>
+<li>
+<p><strong>logically valid</strong>; it will respect logic within the dataset definition itself. For example, it won't produce a clinical event date before a patient's date of birth or after their date of death.</p>
+</li>
+</ul>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> try this out by updating <code>analysis/dataset_definition.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ehrql.tables.core</span> <span class="kn">import</span> <span class="n">patients</span><span class="p">,</span> <span class="n">clinical_events</span>
+<span class="o">...</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">clinical_events</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">clinical_events</span><span class="o">.</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">first_for_patient</span><span class="p">()</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">event_date</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">date</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">dob_year</span> <span class="o">=</span> <span class="n">patients</span><span class="o">.</span><span class="n">date_of_birth</span><span class="o">.</span><span class="n">year</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">dod_year</span> <span class="o">=</span> <span class="n">patients</span><span class="o">.</span><span class="n">date_of_death</span><span class="o">.</span><span class="n">year</span>
+</code></pre></div>
+<ul>
+<li><strong>consistent</strong> across multiple runs of the same dataset definition; although the data generated is random, it is "seeded", which means that the same data will be generated each time.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Check dummy datasets are consistent</p>
+<p>Confirm for yourself that dummy datasets are consitent running the <code>generate-dataset</code> command several times and checking the output dataset from each run.</p>
+</div>
+<div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>generate-dataset<span class="w"> </span>analysis/dataset_definition.py
+</code></pre></div>
+<h3 id="provide-your-own-dummy-tables">Provide your own dummy tables<a class="headerlink" href="#provide-your-own-dummy-tables" title="Permanent link">&para;</a></h3>
+<p>You can also provide your own dummy tables. ehrQL will use the dummy tables as the backend data from which to extract the dataset. You can refer to the <a href="https://docs.opensafely.org/ehrql/reference/schemas/">table schema reference</a>
+in the OpenSAFELY documentation for a guide to the available tables and columns.</p>
+<p>However, setting up lots of dummy tables can be tedious. ehrQL generates dummy datasets by first creating dummy tables, and then running the dataset definition on them. We can use this to create dummy tables from a dataset definition, rather than just a dummy dataset.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> Using our updated dataset definition file, create dummy tables and write them to a local folder called <code>dummy_tables</code></p>
+<div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>create-dummy-tables<span class="w"> </span>analysis/dataset_definition.py<span class="w"> </span>dummy_tables
+</code></pre></div>
+<p><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:" /> Have a look at the files that have been created in the <code>dummy_tables</code> folder; there will be 2 
+csv files corresponding to the two tables that this dataset definition uses.</p>
+<p><img alt="dummy tables" src="../images/dummy_tables_folder.png" /></p>
+<p>Now that we have some dummy tables, we can take advantage of a new feature, the ehrQL debug command from the new OpenSAFELY VSCode extension.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> Update the dataset definition to add a debug statement before and after our
+definition of events. Here we can have a look at the date column from the full (dummy) clinical events
+table, and then the column after we've filtered to just the first event for each patient.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">ehrql</span> <span class="kn">import</span> <span class="n">create_dataset</span><span class="p">,</span> <span class="n">debug</span>
+<span class="o">...</span>
+<span class="n">debug</span><span class="p">(</span><span class="n">clinical_events</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">clinical_events</span><span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">clinical_events</span><span class="o">.</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">first_for_patient</span><span class="p">()</span>
+<span class="n">debug</span><span class="p">(</span><span class="n">events</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="o">...</span>
+</code></pre></div>
+<p>Click on the "Debug ehrQL" button in the bottom right.</p>
+<p><img alt="ehrQL debug button" src="../images/debug_ehrql_btn.png" /></p>
+<p>This will open a new panel and display the columns we asked to debug.</p>
+<p><img alt="ehrQL debug output" src="../images/debug_output.png" /></p>
+<p>Once you've created some dummy tables, you can then use those tables as the input when you run your dataset
+definition again locally. Or you can use them as a starting point to generate more data, or to test your
+dataset definition is extracting data as you’d expect.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> To run our dataset extraction again, this time with the dummy tables:
+<div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>generate-dataset<span class="w"> </span>analysis/dataset_definition.py<span class="w"> </span>--dummy-tables<span class="w"> </span>dummy_tables
+</code></pre></div></p>
+<h3 id="generating-dummy-tables">Generating dummy tables<a class="headerlink" href="#generating-dummy-tables" title="Permanent link">&para;</a></h3>
+<p>Another strategy is to use ehrQL to build the dummy tables you want, and then feed those into your dataset
+definition to see if it extracts the patients you expect.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>We want to extract patients who 18-80 and are in the city of London (E02000001). To do this, we've written
+the dataset definition at <code>analysis/dataset_definition_london_adults.py</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> 
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+
+<span class="n">london_msoa</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">addresses</span>
+    <span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">addresses</span><span class="o">.</span><span class="n">msoa_code</span><span class="o">==</span><span class="s2">&quot;E02000001&quot;</span><span class="p">)</span> <span class="o">&amp;</span>  <span class="n">addresses</span><span class="o">.</span><span class="n">msoa_code</span><span class="o">.</span><span class="n">is_not_null</span><span class="p">())</span>
+   <span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">addresses</span><span class="o">.</span><span class="n">end_date</span><span class="p">)</span>
+   <span class="o">.</span><span class="n">last_for_patient</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">dataset</span><span class="o">.</span><span class="n">define_population</span><span class="p">((</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="n">min_age</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;=</span> <span class="n">max_age</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">london_msoa</span><span class="o">.</span><span class="n">exists_for_patient</span><span class="p">())</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">msoa</span> <span class="o">=</span> <span class="n">london_msoa</span><span class="o">.</span><span class="n">msoa_code</span>
+</code></pre></div></p>
+<p>If we ask ehrQL to generate dummy tables from the dataset definition, all patients will have MSOA
+E02000001, because that makes them satisfy the dataset definition.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> Run this dataset definition</p>
+<div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>generate-dataset<span class="w"> </span>analysis/dataset_definition_london_adults.py
+</code></pre></div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> The output is a dataset, all with the correct MSOA code.
+<div class="highlight"><pre><span></span><code><span class="o">[</span>info<span class="w">   </span><span class="o">]</span><span class="w"> </span>Building<span class="w"> </span>dataset<span class="w"> </span>and<span class="w"> </span>writing<span class="w"> </span>results
+patient_id,msoa
+<span class="m">1</span>,E02000001
+<span class="m">2</span>,E02000001
+<span class="m">3</span>,E02000001
+<span class="m">4</span>,E02000001
+<span class="m">5</span>,E02000001
+<span class="m">6</span>,E02000001
+<span class="m">7</span>,E02000001
+<span class="m">8</span>,E02000001
+<span class="m">10</span>,E02000001
+<span class="m">11</span>,E02000001
+</code></pre></div></p>
+<p>Output the dummy tables:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> </p>
+<div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>create-dummy-tables<span class="w"> </span>analysis/dataset_definition_london_adults.py<span class="w"> </span>dummy_tables
+</code></pre></div>
+<p>The addresses.csv table that has been produced ONLY contains null values and the code E02000001 (which is
+present for every patient in at least one row).</p>
+<p>But, we want to make sure that our dataset definition successfully extracts patients with MSOA code
+E02000001 from patients with other MSOAs, and patients who have no MSOA available at all. And we want to
+check that it can extract patients of the right age from wider data; i.e. does it properly exclude patients
+who are too old/young?</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span> <code>analysis/dummy_data_definition_london_adults.py</code></p>
+<p>To do this, let's write a different dataset definition that just produces the tables. This will include the
+data we want, but also allows for producing patients who have no address data, patients whose MSOA code is
+different, and patients who are outside the age range.</p>
+<p>We define some possible MSOAs, including the target "E02000001".</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span>
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="n">possible_msoas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;E02000001&quot;</span><span class="p">,</span> <span class="s2">&quot;E02000002&quot;</span><span class="p">,</span> <span class="s2">&quot;E02000003&quot;</span><span class="p">,</span> <span class="s2">&quot;E02000004&quot;</span><span class="p">]</span>
+</code></pre></div></p>
+<p>Now define an address variable that selects patients who have data in the addresses table, where the MSOA code is one of these possible codes, or none.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span>
+<div class="highlight"><pre><span></span><code><span class="n">address</span> <span class="o">=</span> <span class="p">(</span>
+   <span class="n">addresses</span>
+   <span class="o">.</span><span class="n">where</span><span class="p">(</span>
+       <span class="p">(</span><span class="n">addresses</span><span class="o">.</span><span class="n">msoa_code</span><span class="o">.</span><span class="n">is_in</span><span class="p">(</span><span class="n">possible_msoas</span><span class="p">)</span> <span class="o">|</span>  <span class="n">addresses</span><span class="o">.</span><span class="n">msoa_code</span><span class="o">.</span><span class="n">is_null</span><span class="p">())</span>
+   <span class="p">)</span>
+   <span class="o">.</span><span class="n">sort_by</span><span class="p">(</span><span class="n">addresses</span><span class="o">.</span><span class="n">end_date</span><span class="p">)</span>
+   <span class="o">.</span><span class="n">last_for_patient</span><span class="p">()</span>
+<span class="p">)</span>
+</code></pre></div>
+And define a variable that selects patients who have NO address data:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span>
+<div class="highlight"><pre><span></span><code><span class="n">no_address</span> <span class="o">=</span> <span class="o">~</span><span class="n">addresses</span><span class="o">.</span><span class="n">exists_for_patient</span><span class="p">()</span>
+</code></pre></div></p>
+<p>Add the age column to the output dataset - this will make sure relevant columns are included in the dummy
+patient table. We also add the msoa code, just so we can check what's being produced.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span></p>
+<div class="highlight"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">patients</span><span class="o">.</span><span class="n">age_on</span><span class="p">(</span><span class="n">index_date</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">msoa</span> <span class="o">=</span> <span class="n">address</span><span class="o">.</span><span class="n">msoa_code</span>
+</code></pre></div>
+<p>Finally, define our population to include patients of any age, who either have a matching address
+or no address data at all.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3"/></svg></span></p>
+<div class="highlight"><pre><span></span><code><span class="n">dataset</span><span class="o">.</span><span class="n">define_population</span><span class="p">(</span><span class="n">patients</span><span class="o">.</span><span class="n">exists_for_patient</span><span class="p">()</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">address</span><span class="o">.</span><span class="n">exists_for_patient</span><span class="p">()</span> <span class="o">|</span> <span class="n">no_address</span><span class="p">))</span>
+</code></pre></div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> Generate a dataset; we get a set of patients, only some of whom will match our actual
+dataset definition.</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>info<span class="w">   </span><span class="o">]</span><span class="w"> </span>Building<span class="w"> </span>dataset<span class="w"> </span>and<span class="w"> </span>writing<span class="w"> </span>results
+patient_id,age,msoa
+<span class="m">1</span>,33,E02000004
+<span class="m">2</span>,28,E02000004
+<span class="m">3</span>,62,E02000001
+<span class="m">4</span>,14,
+<span class="m">5</span>,112,E02000002
+<span class="m">6</span>,33,E02000004
+<span class="m">7</span>,85,E02000004
+<span class="m">8</span>,19,
+<span class="m">9</span>,64,
+<span class="m">10</span>,61,E02000001
+</code></pre></div>
+<p>Output these dummy tables:
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> </p>
+<div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>create-dummy-tables<span class="w"> </span>analysis/dummy_data_definition_london_adults.py<span class="w"> </span>dummy_tables
+</code></pre></div>
+<p>Now use them to run the actual dataset definition:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> </p>
+<p><div class="highlight"><pre><span></span><code>opensafely<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>ehrql:v1<span class="w"> </span>generate-dataset<span class="w"> </span>analysis/dataset_definition_london_adults.py<span class="w"> </span>--dummy-tables<span class="w"> </span>dummy_tables
+</code></pre></div>
+And we can verify that our dataset definition is indeed extracting only the patients who match our
+criteria: </p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>info<span class="w">   </span><span class="o">]</span><span class="w"> </span>Building<span class="w"> </span>dataset<span class="w"> </span>and<span class="w"> </span>writing<span class="w"> </span>results
+patient_id,age,msoa
+<span class="m">1</span>,33,E02000001
+<span class="m">10</span>,61,E02000001
+<span class="m">3</span>,62,E02000001
+<span class="m">6</span>,33,E02000001
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercise: Covid boosters</p>
+<p><code>analysis/dataset_definition_covid_boosters.py</code> is a dataset definition that identifies the type of
+Covid vaccine patients received in Spring 2023, and extracts information about where the
+patients live. We expect that a downstream analysis script will use this data to analyse regional
+variations if the type of vaccine received.</p>
+<p>First try running this dataset definition and look at the dummy dataset it produces. As vaccine product
+names are not defined in ehrQL, it can only produce random data that matches the expected <em>pattern</em> for
+a product name (i.e. a string of characters), and not real product names.</p>
+<p>Write a dummy tables dataset definition that will create dummy tables that can be used to run the
+dataset definition at <code>analysis/dataset_definition_covid_boosters.py</code> and produce vaccines with valid
+product names. Your dummy tables should also include vaccinations that are not Covid vaccines, in order
+to test that the dataset definition correctly filters them out.</p>
+<p>(<img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4a1.svg" title=":bulb:" /> Hint: You may want to make use of the data at <code>analysis/supporting_data/vaccine_product_names.py</code>)</p>
+</div>
+<h2 id="limitations-of-native-opensafely-dummy-data">Limitations of native OpenSAFELY dummy data<a class="headerlink" href="#limitations-of-native-opensafely-dummy-data" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Complex dataset definitions may take a long time to generate patients</li>
+<li>...or may not be able to generate the requested number of patients</li>
+<li>Certain fields will generate values that are valid in format, but are not necessarily real data. E.g. SNOMED CT codes may be generated in a valid format, but may not be real codes. 
+    e.g. The following will produce codes that look like SNOMED CT codes, but are randomly generated.
+    Any further analysis which tries to use the code to filter or summarise data will fail to
+    match expected data. 
+    <div class="highlight"><pre><span></span><code>code = clinical_events.sort_by(clinical_events.date).first_for_patient().snomedct_code
+</code></pre></div>
+    (To some extent building up your dummy data tables can work around this sort of thing.)</li>
+<li>
+<p>Semantic validity is difficult to ensure in generated dummy data</p>
+<ul>
+<li>
+<p>Certain interactions between tables/columns that should reflect reality will not necessarily be
+  respected unless they are specified in the dataset definition, e.g.</p>
+<ul>
+<li>no consultations after death</li>
+<li>no discharge before admission</li>
+<li>no COVID-19 vaccines before 2020</li>
+</ul>
+<p>(Although note that such events could happen in the real data.)</p>
+</li>
+<li>
+<p>Demographic or clinical tendencies that are expected in the cohort of interest, e.g.</p>
+<ul>
+<li>more white people than black people in England</li>
+<li>correlation between obesity and diabetes</li>
+<li>statins more commonly prescribed in over 50s</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Admission and discharge dates</p>
+<p>An example of semantic validity that ehrQL fails to respect:</p>
+<p>Write a dataset definition that generates a dataset that contains:
+- a patient's date of birth 
+- admission date for the patient's first hospital admission
+- discharge date for the patient's first hospital admission</p>
+<p>(Note: you will need to use the <code>apcs</code> table). </p>
+<p>Configure your dummy data with a population size a bit larger than the default, e.g. 30.  </p>
+<p>Inspect the generated dataset and note that no patients have admission or discharge dates
+before their date of birth, but some have discharge dates that are before their admission dates. </p>
+</div>
+<h2 id="provide-your-own-dummy-dataset">Provide your own dummy dataset<a class="headerlink" href="#provide-your-own-dummy-dataset" title="Permanent link">&para;</a></h2>
+<p>Instead of dummy tables, you can give ehrQL a file containing a dummy dataset. Now, when you run your
+dataset definition, ehrQL will validate the provided dummy dataset to ensure that all the expected columns
+are present, and contain data of the expected types, and then will just write out the provided dummy
+data file as the output dataset.</p>
+<h2 id="future-direction-for-native-opensafely-dummy-data">Future direction for native OpenSAFELY dummy data<a class="headerlink" href="#future-direction-for-native-opensafely-dummy-data" title="Permanent link">&para;</a></h2>
+<p>Work is in progress on improving dummy data generation. The first improvements you're likely to see
+are in efficiency - i.e. making it quicker to generate large amounts of dummy data from complex
+dataset definitions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
