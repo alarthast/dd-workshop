@@ -7,12 +7,14 @@ nav:
   - Building your own dummy data in R: dummy_data_in_r.md
    
 docs_dir: docs_src
-site_dir: docs
+site_dir: site
 
 theme:
   name: material
   logo: images/icon.svg
   favicon: images/icon.svg
+  features:
+    - content.code.copy
 
 markdown_extensions:
   - toc:
@@ -28,5 +30,6 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.inlinehilite
   - pymdownx.tabbed:
       alternate_style: true
