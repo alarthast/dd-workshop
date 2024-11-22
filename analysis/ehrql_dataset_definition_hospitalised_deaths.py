@@ -2,6 +2,13 @@ from ehrql import create_dataset, months, debug
 from ehrql.tables.core import patients, ons_deaths
 from ehrql.tables.tpp import apcs, practice_registrations
 
+HEART_FAILURE_CODES = [
+    "I50",
+    "I500",
+    "I501",
+    "I509"
+]
+
 
 study_start_date = "2022-01-01"
 study_end_date = "2023-01-01"
@@ -30,6 +37,6 @@ dataset.hospitalised_date = hospitalisation_in_6_months_before_death
 dataset.define_population(
     died_in_study_period & 
     hospitalisation_in_6_months_before_death.is_not_null() & 
-    ons_deaths.underlying_cause_of_death.is_not_null()
+    ons_deaths.underlying_cause_of_death.is_in(HEART_FAILURE_CODES)
 )
 debug(dataset)
