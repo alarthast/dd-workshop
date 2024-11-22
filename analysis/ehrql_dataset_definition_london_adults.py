@@ -12,11 +12,13 @@ dataset = create_dataset()
 
 london_msoa = (
     addresses
-    .where((addresses.msoa_code == "E02000001").is_not_null())
+    .where(addresses.msoa_code == "E02000001")
    .sort_by(addresses.end_date)
    .last_for_patient()
 )
 
 dataset.define_population((age >= min_age) & (age <= max_age) & london_msoa.exists_for_patient())
+
+dataset.age = age
 dataset.msoa = london_msoa.msoa_code
 
